@@ -2,21 +2,30 @@
 <head>
 <title>Juan Tristan  Digital Business Card</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="mobile-web-app-capable" content="yes">
 <link rel="icon" sizes="192x192" href="path/to/icon.png">
 <meta name="theme-color" content="#ffffff">
 
 <script>
     function addToHomeScreen() {
-      var isMobile = /iPhone|iPad|iPod/Android/i.test(navigator.userAgent);
-      if (isMobile && !window.matchMedia('(display-mode: standalone)').matches) {
+      if (navigator.userAgent.match(/(iPhone|iPad|iPod)/)) {
+        var message = "To add this website to your home screen, tap the 'Share' button and then select 'Add to Home Screen.'";
+        alert(message);
+      } else if (navigator.userAgent.match(/(Android)/)) {
         var message = "To add this website to your home screen, tap the 'Menu' button and then select 'Add to Home screen.'";
         alert(message);
       }
     }
     
     window.addEventListener('load', function() {
-      addToHomeScreen();
+      var addBtn = document.createElement('button');
+      addBtn.innerText = "Add to Home Screen";
+      addBtn.addEventListener('click', function() {
+        addToHomeScreen();
+      });
+    
+      document.body.appendChild(addBtn);
     });
     </script>
 </head>
