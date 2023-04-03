@@ -2,7 +2,25 @@
 <head>
 <title>Juan Tristan  Digital Business Card</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="mobile-web-app-capable" content="yes">
+<link rel="icon" sizes="192x192" href="path/to/icon.png">
+<meta name="theme-color" content="#ffffff">
+
+<script>
+    function addToHomeScreen() {
+      var isMobile = /iPhone|iPad|iPod/Android/i.test(navigator.userAgent);
+      if (isMobile && !window.matchMedia('(display-mode: standalone)').matches) {
+        var message = "To add this website to your home screen, tap the 'Menu' button and then select 'Add to Home screen.'";
+        alert(message);
+      }
+    }
+    
+    window.addEventListener('load', function() {
+      addToHomeScreen();
+    });
+    </script>
 </head>
+
 <center>
 	<body bgcolor="#FFFFFF" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
 		<!-- Save for Web Slices (Juan Tristan  Digital Business Card.psd) -->
