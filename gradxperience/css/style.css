@@ -1,0 +1,538 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Roboto:wght@300;400;500;700;900&display=swap");
+
+:root {
+  --clr-red: #d91b26;
+  --clr-yellow: #d19743;
+
+  --roboto: "Roboto", sans-serif !important;
+  --poppins: "Poppins", san-serif !important;
+}
+
+body {
+  font-family: var(--poppins) !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+p {
+  color: #1b1b1b !important;
+}
+
+h1,
+h2,
+.btn {
+  font-family: var(--roboto);
+}
+
+a {
+  color: #fff !important;
+  text-decoration: none !important;
+}
+
+img {
+  width: 100%;
+}
+
+section:not(section#home) {
+  padding-top: 150px !important;
+  padding-bottom: 130px !important;
+}
+
+.row {
+  --bs-gutter-x: 0 !important;
+  --bs-gutter-y: 0 !important;
+}
+
+.btn {
+  padding: 10px 30px !important;
+  border-radius: 10px !important;
+  transition: 400ms all ease-in-out !important;
+}
+
+.btn:hover {
+  background-color: transparent !important;
+}
+
+.text-red {
+  color: var(--clr-red) !important;
+}
+
+.text-yellow {
+  color: var(--clr-yellow) !important;
+}
+
+.text-justify {
+  text-align: justify;
+}
+
+.btn-yellow {
+  background: var(--clr-yellow) !important;
+  border: 2px solid var(--clr-yellow) !important;
+}
+
+.section-title {
+  position: relative;
+}
+
+.section-title::before {
+  position: absolute;
+  content: "";
+  height: 3px;
+  width: 300px;
+  background: var(--clr-yellow);
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: auto;
+}
+
+/* ====================================
+      NAVIGATION
+=================================== */
+.navbar {
+  z-index: 1000;
+}
+
+.navbar-brand img {
+  width: 30% !important;
+}
+
+.nav-link {
+  padding-left: 20px !important;
+}
+
+.navbar-toggler:focus {
+  outline: unset !important;
+  border: unset !important;
+  box-shadow: none !important;
+}
+
+/* Change navbar styling on scroll */
+
+.navigation-wrap.scroll-on {
+  box-shadow: 0 0.125rem 1.75rem 0 rgb(0, 0, 0, 0.3);
+}
+
+/* ====================================
+      LANDING SECTION
+=================================== */
+.landing {
+  height: 100vh;
+  background: url("../images/web-cover.jpg");
+  background-color: rgba(0, 0, 0, 0.5);
+  background-blend-mode: multiply;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom center;
+  padding-top: 124px;
+}
+
+.landing .container {
+  background: linear-gradient(
+    to left,
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 0.4) 50%,
+    rgba(0, 0, 0, 0.9)
+  );
+}
+
+.cta {
+  top: 50%;
+  right: 0;
+}
+
+.cta h2::after {
+  position: absolute;
+  content: "";
+  background: var(--clr-red);
+  height: 3px;
+  width: 120px;
+  top: 50%;
+  margin-left: 20px;
+}
+
+/* ====================================
+      ABOUT SECTION
+=================================== */
+section.about-section {
+  padding-bottom: 0 !important;
+}
+
+.card {
+  border-color: rgba(255, 255, 255, 0.1) !important;
+  border-radius: 10px !important;
+  box-shadow: 0 3px 15px rgba(0, 0, 0, 0.4);
+  cursor: default;
+  transition: 400ms all ease-in-out;
+  background: transparent !important;
+  padding: 20px;
+}
+
+.about-section .card-body {
+  background: rgba(255, 255, 255, 0.05) !important;
+  border-radius: inherit;
+}
+
+.about-section .card-body > * {
+  color: #fff !important;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+}
+
+.card-title {
+  font-weight: 500;
+}
+.about-section .card-text {
+  font-size: 1rem !important;
+  color: #ddd !important;
+}
+
+/* ====================================
+    SECTION DIVIDER
+=================================== */
+.section-divider {
+  width: 100%;
+  position: relative;
+  height: 12px;
+}
+
+.section-divider .divider-line {
+  position: relative;
+  display: flex;
+  margin: 0 auto;
+  width: fit-content;
+  max-width: 100%;
+}
+
+.section-divider .divider-line > * {
+  margin-left: 20px;
+}
+
+.section-divider .divider-line::before,
+.section-divider .divider-line::after {
+  content: "";
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.25);
+  height: 1px;
+  top: 5px;
+  width: 150%;
+  right: 100%;
+  margin-right: 20px;
+}
+.section-divider .divider-line::after {
+  right: unset;
+  left: 100%;
+  margin-right: 0;
+  margin-left: 20px;
+}
+
+.section-divider .divider-line .long {
+  width: 200px;
+  height: 12px;
+  position: relative;
+  display: block;
+  border: 2px solid rgba(0, 0, 0, 0.5);
+  border-radius: 12px;
+  background: rgba(0, 0, 0, 0.1);
+  margin: 0 20px;
+}
+
+.section-divider .divider-line .long:after,
+.section-divider .divider-line .long:before {
+  position: absolute;
+  content: "";
+  background: rgba(0, 0, 0, 0.05);
+  border-radius: 50%;
+  border: 2px solid #444;
+  width: 10px;
+  height: 10px;
+  top: -2.5px;
+  left: -30px;
+}
+
+.section-divider .divider-line .long:before {
+  right: -30px;
+  left: unset;
+}
+
+/* ====================================
+      PROGRAMS SECTION
+=================================== */
+.key-points-list li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  list-style: none;
+}
+
+.key-points-list li img {
+  width: fit-content;
+}
+
+.programs .card {
+  border-color: rgb(0, 0, 0, 0.2) !important;
+}
+
+.programs .card-body {
+  background: rgba(0, 0, 0, 0.15) !important;
+  border-radius: inherit;
+  padding: 25px 20px 20px;
+}
+
+.programs .card:hover {
+  transform: unset;
+}
+
+.program-no {
+  display: block;
+  width: 65px;
+  color: var(--clr-red);
+  font-size: 1.7rem;
+  text-align: center;
+  margin-bottom: 20px;
+  border-radius: 50%;
+  padding: 8px;
+  border: 3px solid var(--clr-red);
+}
+
+/* ====================================
+      ADMISSIONS SECTION
+=================================== */
+.admissions .text-red {
+  font-weight: 600;
+}
+
+.admissions .card i {
+  color: #fff;
+  font-size: 2rem;
+  background: var(--clr-red);
+  width: fit-content;
+  margin: auto;
+  margin-bottom: 20px;
+  padding: 9px 10px;
+  border-radius: 50%;
+}
+
+.admissions .card {
+  border-color: rgba(0, 0, 0, 0.2) !important;
+}
+
+.admissions .card-body {
+  background: rgba(0, 0, 0, 0.15) !important;
+  border-radius: inherit;
+}
+
+.admissions .card-row .col:nth-child(even) {
+  transform: translateY(40px) !important;
+}
+
+@media screen and (max-width: 9989px) {
+  .admissions .card-row .col:nth-child(even) {
+    transform: unset !important;
+  }
+}
+
+/* ====================================
+      TESTIMONIALS SECTION
+=================================== */
+.swiper {
+  width: 800px;
+  max-width: 100%;
+  height: 280px;
+  border-radius: 20px;
+}
+
+.swiper-wrapper {
+  border-radius: 20px;
+}
+
+.swiper-slide {
+  color: #fff;
+  text-align: center;
+  display: flex !important;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0 4rem;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: inherit;
+}
+.swiper-slide > * {
+  color: #fff !important;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  color: var(--clr-red) !important;
+}
+
+.swiper-button-next {
+  right: 1.3rem !important;
+}
+.swiper-button-prev {
+  left: 1.3rem !important;
+}
+
+.swiper-button-prev:after,
+.swiper-button-next:after {
+  font-size: 2rem !important;
+  font-weight: 700;
+}
+
+.swiper-pagination-bullet.swiper-pagination-bullet-active {
+  background: var(--clr-red) !important;
+}
+
+.swiper-slide .name {
+  margin-bottom: 20px;
+}
+
+.swiper-slide .review {
+  padding: 0 30px;
+  line-height: 1.5;
+  font-size: 1.1rem;
+}
+
+/* ====================================
+      CONTACT SECTION
+=================================== */
+.contact-info {
+  background: #d91b26;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 6px;
+  box-shadow: 0px 5px 20px rgb(0, 0, 0, 0.9);
+  padding: 30px;
+}
+
+.float-right {
+  border-right: 1px solid #fff !important;
+}
+
+.info-details > p {
+  word-break: break-all;
+  font-size: 1.2rem;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="tel"],
+.form-group textarea {
+  border: 1px solid rgba(255, 255, 255, 0.9);
+  border-radius: 4px;
+  box-shadow: 0px 2px 4px 0px rgb(0 0 0 / 6%) !important;
+  height: 57px;
+  padding: 0 25px;
+  background: transparent;
+  font-size: 18px;
+  color: #f1f1f1 !important;
+  outline: none;
+  resize: none;
+  font-size: 16px;
+}
+
+.form-group textarea {
+  height: 200px;
+  padding: 20px 25px;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: #f1f1f1 !important;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  background: rgba(255, 255, 255, 0.1);
+  outline: none !important;
+  border-color: rgba(255, 255, 255, 0.9) !important;
+}
+
+/* ====================================
+      RESPONSIVE DESIGN
+=================================== */
+@media (max-width: 991px) {
+  .navbar-collapse {
+    text-align: center;
+    background: #1b1b1b;
+    padding: 20px;
+  }
+
+  .navbar-collapse .nav-link {
+    color: #fff !important;
+    font-weight: 400;
+  }
+
+  .navbar-brand {
+    display: flex;
+  }
+
+  .navbar-brand img {
+    width: 40% !important;
+  }
+
+  /* LANDING SECTION */
+  .cta {
+    bottom: 20px;
+    top: unset;
+  }
+
+  /* SECTION HEADER */
+  .section-divider .divider-line::before,
+  .section-divider .divider-line::after {
+    width: 80%;
+  }
+
+  /* CONTACT SECTION */
+  .float-right {
+    border-right: unset !important;
+    border-bottom: 1px solid #fff !important;
+    padding-bottom: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar-brand {
+    width: 25%;
+  }
+  .navbar-brand img {
+    width: 100% !important;
+  }
+
+  .section-divider .divider-line::before, .section-divider .divider-line::after {
+    width: 35%;
+  }
+
+  .swiper-slide .review {
+    font-size: 0.9rem;
+  }
+
+  .key-points-list {
+    padding-left: 0;
+  }
+}
+
+@media (max-width: 540px) {
+  .navbar-brand {
+    width: 40%;
+  }
+
+  .cta {
+    padding-left: 30px;
+  }
+
+  .section-divider .divider-line .long {
+    width: 120px;
+  }
+}
+
+@media (max-width: 425px) {
+  .swiper-slide {
+    padding: 2rem;
+  }
+}
+
